@@ -7,7 +7,11 @@ package fr.diginamic.banque.entites;
  */
 public class Compte {
 
-   String numeroCompte;
+   /**
+ * Numero de compte 
+ * solde de compte 
+ */
+String numeroCompte;
    int soldeCompte;
     
    public Compte(String a, int b) {
@@ -15,7 +19,10 @@ public class Compte {
    this.soldeCompte =b;
    }
    
-   @Override
+   /**
+ *Modification de la methode toString
+ */
+@Override
 public String toString() {
 		return " Le numéro de compte est " + numeroCompte + " et le solde de compte est  " + soldeCompte;
 	}
