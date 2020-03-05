@@ -1,19 +1,14 @@
 package fr.diginamic.banque.entites;
 
-import fr.diginamic.banque.entites.Cercle;
+import fr.diginamic.utils.CercleFactory;
 
 public class TestCercle {
+	
+	    public static void main(String[] args) {
+	    CercleFactory cf = new CercleFactory();
+	    System.out.println("Le surface de la cercle est " + cf.Surface(12));
+	    System.out.println("Le surface de la cercle est " + cf.Surface(10)); 
+	    System.out.println("Le surface de la cercle est " + cf.Surface(14));
 
-	public static void main(String[] args) {
-		
-		Cercle[] cercles = new Cercle[2];
-		cercles[0] = new Cercle(12);
-		cercles[1] = new Cercle(10);
-		
-	 for (int i=0; i<cercles.length; i++)
-		System.out.println(cercles[i]);
-		}
-	}
-
-
-
+	    }
+}
