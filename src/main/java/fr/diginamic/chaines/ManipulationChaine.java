@@ -35,7 +35,7 @@ public class ManipulationChaine {
 		
 		
 		System.out.println("\n Nom de client : " + tab[0] +" "+ tab[1]);
-        String compte = tab[3].replace(' ', '_');
+        String compte = tab[3].replaceAll("\\s", "");
 		System.out.println(" Compte : " + tab[2] + " / " +  compte );
 
 	}
