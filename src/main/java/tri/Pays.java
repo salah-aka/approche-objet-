@@ -1,5 +1,7 @@
 package tri;
 
+import java.text.DecimalFormat;
+
 public class Pays implements Comparable<Pays> {
 	/** nom */
 	private String nom;
@@ -38,8 +40,17 @@ public class Pays implements Comparable<Pays> {
 	}
 
 	@Override
-	public String toString() {
+	// Redifinition de la méthode equals
+	public boolean equals(Object object) {
+		if (!(object instanceof Pays)) {
+			return false;
+		}
+		Pays other = (Pays) object;
+		return nom.equals(other.getNom());
+	}
 
+	@Override
+	public String toString() {
 		return nom + " - nbHabitants: " + nbHabitants + " - PIB par habitant :" + pibHabitant + " $" + " - PIB total "
 				+ getPibTotal() + " $";
 	}
